@@ -59,6 +59,9 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.navigation.runtime.ktx)
+    implementation(libs.androidx.navigation.compose)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -74,4 +77,5 @@ dependencies {
     implementation ("androidx.camera:camera-camera2:${cameraxVersion}")
     implementation ("androidx.camera:camera-view:${cameraxVersion}")
     implementation ("androidx.camera:camera-lifecycle:$cameraxVersion")
+    implementation ("io.coil-kt:coil-compose:2.1.0")
 }
