@@ -16,6 +16,8 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.core.content.ContextCompat
 import com.nbscvincent.camera.ui.theme.CameraTheme
 
+import androidx.activity.viewModels
+
 class MainActivity : ComponentActivity() {
 
     private val cameraPermissionRequest =
@@ -24,6 +26,8 @@ class MainActivity : ComponentActivity() {
                 //TODO: Show error message since camera permission is required
             }
         }
+
+    private val photoViewModel: PhotoViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -45,7 +49,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CameraScreen()
+                    CameraNavHost(photoViewModel)
                 }
             }
         }
